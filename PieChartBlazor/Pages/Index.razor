@@ -9,13 +9,13 @@
 <button class="btn btn-primary" @onclick="GeneratePieChartBlazor">Generate Pie Chart</button>
 
 @code{
-    CountryInfo countryInfo = new CountryInfo();
-    List<CountryInfo> countryInfos = new List<CountryInfo>();
+    DataChart dataChart = new DataChart();
+    List<DataChart> dataCharts = new List<DataChart>();
 
     private async Task GeneratePieChartBlazor()
     {
-        countryInfos = countryInfo.GetCountryInfos();    //variable has "s"
-        await jsRunTime.InvokeVoidAsync("GeneratePieChart", countryInfos);
+        dataCharts = dataChart.GetDataCharts();    //variable has "s"
+        await jsRunTime.InvokeVoidAsync("GeneratePieChart", dataCharts);
     }
 
 }
